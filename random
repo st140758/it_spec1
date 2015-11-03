@@ -1,0 +1,32 @@
+<script>
+function ajaxRun()
+{
+  var xmlHttp;
+  try
+  {
+    /* Firefox, Opera 8.0+, Safari */
+    xmlHttp=new XMLHttpRequest();
+  }
+  catch (e)
+  {
+    /* newer IE */
+    try
+    {
+      xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    catch (e)
+    {
+      /* older IE */
+      try
+      {
+        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      catch (e)
+      {
+        alert("Your browser is old and does not have AJAX support!");
+        return false;
+      }
+    }
+  }
+}
+</script>
